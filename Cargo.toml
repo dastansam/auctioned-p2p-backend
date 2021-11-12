@@ -1,9 +1,9 @@
 [workspace]
 members = [
-    "p2p/node",
-    "p2p/grpc",
-    "p2p/db",
-    "nft-node"
+    "services/node",
+    "services/grpc",
+    "services/db",
+    "node"
 ]
 
 resolver = "2"
