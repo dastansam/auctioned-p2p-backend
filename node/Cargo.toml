@@ -1,0 +1,17 @@
+[package]
+name = "nft-node"
+version = "0.0.1"
+authors = ["Dastanbek Samatov <dastanbeksamatov@gmail.com>"]
+description = "Main entry binary package"
+edition = "2018"
+
+[dependencies]
+libp2p = { version = "0.39.1" }
+async-std = { version = "1.10.0", features = ["attributes", "tokio1"] } 
+futures = "0.3.17"
+env_logger = "0.9.0"
+prost = "0.8"
+# internal deps
+node = { path = "../p2p/node" }
+grpc_service = { path = "../p2p/grpc" }
+db = { path = "../p2p/db" }
