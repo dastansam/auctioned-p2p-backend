@@ -1,8 +1,10 @@
 [workspace]
 members = [
-    "services/node",
+    "services/service",
     "services/grpc",
     "services/db",
+    "services/types",
+    "services/web3",
     "node"
 ]
 

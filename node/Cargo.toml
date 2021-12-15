@@ -10,8 +10,15 @@ libp2p = { version = "0.39.1" }
 async-std = { version = "1.10.0", features = ["attributes", "tokio1"] } 
 futures = "0.3.17"
 env_logger = "0.9.0"
-prost = "0.8"
+prost = "0.9"
+dirs = "3.0"
+ctrlc = "3.1.4"
+serde = { version = "1.0", features = ["derive"] }
+structopt = { version = "0.3" }
+
 # internal deps
-node = { path = "../services/node" }
-grpc_service = { path = "../services/grpc" }
+p2p-service = { path = "../services/service" }
+grpc = { path = "../services/grpc" }
 db = { path = "../services/db" }
+common-types = { path = "../services/types" }
+web3 = { path = "../services/web3" }

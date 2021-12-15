@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package node_rpc;
+
+// declare interface for our RPC server
+service NodeRpc {
+    rpc ping(EmptyRequest) returns (EmptyRequest) {}
+    rpc GetOrderCommitments(EmptyRequest) returns (OrderCommitmentList) {}
+    rpc CreateOrderCommitment(OrderCommitment) returns (OrderCommitment) {}
+    rpc CancelOrderCommitment(OrderCommitment) returns (EmptyRequest) {}
+}
+
+// Order Commitment type
+message OrderCommitment {
+    string signer = 1;
+    string taker = 2;
+    string contract_address = 3;
+    string token_address = 4;
+    string nft_id = 5;
+    string gossiper = 6;
+    int32 price = 7;
+    enum OrderType {
+        BUY = 0;
+        SELL = 1;
+    }
+    OrderType order_type = 8;
+    string order_id = 9;
+}
+
+// Signature type
+message Signature {
+    bytes v = 1;
+    bytes r = 2;
+    bytes s = 3;
+}
+
+// List of OrderCommitments
+message OrderCommitmentList {
+    repeated OrderCommitment order_commitments = 1;
+}
+
+message EmptyRequest {}

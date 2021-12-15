@@ -1,0 +1,40 @@
+{
+    "name": "auctioned-nft-node",
+    "version": "0.0.1",
+    "author": "Dastanbek Samatov",
+    "license": "MIT",
+    "description": "Contracts setup",
+    "scripts": {
+        "compile": "npx hardhat compile",
+        "test": "npx hardhat test",
+        "test:network": "mocha test/network.js",
+        "test:auction": "mocha test/Auction.js",
+        "clean": "npx hardhat clean && rm -rf cache coverage build node_modules yarn.lock coverage.json .openzeppelin"
+    },
+    "devDependencies": {
+        "@nomiclabs/hardhat-ethers": "^2.0.0",
+        "@nomiclabs/hardhat-etherscan": "^2.1.1",
+        "@nomiclabs/hardhat-solhint": "^2.0.0",
+        "@nomiclabs/hardhat-waffle": "^2.0.0",
+        "@nomiclabs/hardhat-web3": "^2.0.0",
+        "@openzeppelin/contracts": "^4.1.0",
+        "chai": "^4.3.0",
+        "dotenv": "^10.0.0",
+        "ethereum-waffle": "^3.1.1",
+        "ethers": "^5.0.0",
+        "hardhat": "^2.7.0",
+        "hardhat-spdx-license-identifier": "^2.0.3",
+        "solc": "0.8.9",
+        "solhint": "^3.2.0",
+        "solidity-coverage": "^0.7.14",
+        "solidity-docgen": "^0.5.4",
+        "web3": "^1.6.1",
+        "grpc-caller": "^0.14.0",
+        "@grpc/grpc-js": "^1.4.4",
+        "@grpc/proto-loader": "^0.6.7"
+    },
+    "dependencies": {
+        "ganache-cli": "^6.12.2",
+        "global": "^4.4.0"
+    }
+}
