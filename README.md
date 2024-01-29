@@ -1,4 +1,4 @@
-# Decentralized NFT Marketplace Backend
+# Decentralized Marketplace of Backends
 
 Auctioned marketplace backend repository. Defines the peer-to-peer node and it's logic.
 
